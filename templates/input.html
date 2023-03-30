@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  .center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Dropdown</title>
+</head>
+
+<body ><form method="POST" action="/"  >
+    <h3 align="center">Please select Dosha Symptoms</h3>
+<select  name="dosha" method="POST" action="/"  multiple style="padding: 10px" class="center-block">
+  <option value="{{doshas[0]}}" selected >{{doshas[0]}}</option>
+  {% for dosha in doshas[1:] %}
+    <option value="{{dosha}}">{{dosha}}</option>
+  {% endfor %}
+</select><br><br><h3 align="center">Please select Dhatus Symptoms</h3>
+<select  name="dhatus" method="POST" action="/"  multiple style="padding: 10px" class="center-block">
+  <option value="{{dhatuss[0]}}" selected >{{dhatuss[0]}}</option>
+  {% for dhatus in dhatuss[1:] %}
+    <option value="{{dhatus}}">{{dhatus}}</option>
+  {% endfor %}
+</select><br><br><h3 align="center">Please select Desha Symptoms</h3>
+<select  name="desha" method="POST" action="/"  multiple style="padding: 10px" class="center-block">
+  <option value="{{deshas[0]}}" selected >{{deshas[0]}}</option>
+  {% for desha in deshas[1:] %}
+    <option value="{{desha}}">{{desha}}</option>
+  {% endfor %}
+  <input type="submit" value="Submit" class="myButton center-block"></select>
+  <br><br><h3 align="center">Please select Kaala Symptoms</h3>
+<select  name="kaala" method="POST" action="/"  multiple style="padding: 10px" class="center-block">
+  <option value="{{kaalas[0]}}" selected >{{kaalas[0]}}</option>
+  {% for kaala in kaalas[1:] %}
+    <option value="{{kaala}}">{{kaala}}</option>
+  {% endfor %}
+  <input type="submit" value="Submit" class="myButton center-block"></select>
+  <br><br><h3 align="center">Please select bala Symptoms</h3>
+<select  name="bala" method="POST" action="/"  multiple style="padding: 10px" class="center-block">
+  <option value="{{balas[0]}}" selected >{{balas[0]}}</option>
+  {% for bala in balas[1:] %}
+    <option value="{{bala}}">{{bala}}</option>
+  {% endfor %}</select><br><br>
+  <h3 align="center">Please select anala Symptoms</h3>
+<select  name="anala" method="POST" action="/"  multiple style="padding: 10px" class="center-block">
+  <option value="{{analas[0]}}" selected >{{analas[0]}}</option>
+  {% for anala in analas[1:] %}
+    <option value="{{anala}}">{{anala}}</option>
+  {% endfor %}</select>
+  <br><br>
+  <h3 align="center">Please select satva Symptoms</h3>
+<select  name="satva" method="POST" action="/"  multiple style="padding: 10px" class="center-block">
+  <option value="{{satvas[0]}}" selected >{{satvas[0]}}</option>
+  {% for satva in satvas[1:] %}
+    <option value="{{satva}}">{{satva}}</option>
+  {% endfor %}</select>
+  <br><br>
+  <h3 align="center">Please select saatmya Symptoms</h3>
+<select  name="saatmya" method="POST" action="/"  multiple style="padding: 10px" class="center-block">
+  <option value="{{saatmyas[0]}}" selected >{{saatmyas[0]}}</option>
+  {% for saatmya in saatmyas[1:] %}
+    <option value="{{saatmya}}">{{saatmya}}</option>
+  {% endfor %}</select>
+  <br><br>
+  <h3 align="center">Please select rogakaala Symptoms</h3>
+<select  name="rogakaala" method="POST" action="/"  multiple style="padding: 10px" class="center-block">
+  <option value="{{rogakaalas[0]}}" selected >{{rogakaalas[0]}}</option>
+  {% for rogakaala in rogakaalas[1:] %}
+    <option value="{{rogakaala}}">{{rogakaala}}</option>
+  {% endfor %}</select><br>
+  <input type="submit" value="Submit" class="myButton center-block"></select>
+</form>
+
+</body>
+</html>

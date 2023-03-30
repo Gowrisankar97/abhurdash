@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<style >
+table, th {
+  border:solid black;
+}
+.center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>output</title>
+</head>
+<body>
+<h1 align="center">Assessment page</h1>
+<br><br>
+<h2 align="center">Patient Assessment</h2>
+<table align="center">
+  {% for day in division %}
+ <tr> <th>
+    {{day}}
+  </th></tr>
+
+{% endfor %}
+
+</table>
+<br><br><h2 align="center">Ml Predicted Diagnosis:*******</h2>
+<form >
+ <input class="center-block" type="button" value="Home" onclick="history.back()" >
+</form>
+</body>
+</html>
