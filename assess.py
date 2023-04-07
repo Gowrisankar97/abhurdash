@@ -1,3 +1,4 @@
+
 def dosha(d1):
     dosha=[]
     vata_samaa=['Enthusiasm',
