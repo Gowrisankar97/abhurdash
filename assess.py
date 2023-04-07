@@ -77,7 +77,7 @@ def dosha(d1):
 
 
 def dhatus (d2):
-    rasa_samaa=['Optimum nourshment']
+    rasa_samaa=['Optimum nourishment']
     rasa_vriddhi=['Increased salivation',
   'Anorexia',
   'Nausea',
@@ -85,8 +85,8 @@ def dhatus (d2):
   'Aversion to sweets',
   'Body pain']
     rasa_kshaya=['Dryness of body', 'Tiredness', 'Emaciation', 'Intolerant to sounds']
-    rakta_samaa=['Proper blood supply']
-    rakta_vriddhi=['Skin disorders',
+    rakhta_samaa=['Proper blood supply']
+    rakhta_vriddhi=['Skin disorders',
   'Bleeding disorders',
   'Jaundice',
   'Decreased digestion',
@@ -102,7 +102,7 @@ def dhatus (d2):
     medas_vriddhi=['Tiredness',
   'Dyspnoea on exertion',
   'Drooping buttocks',
-  'breasts and abdomen']
+  'Dropping breasts and abdomen']
     medas_kshaya=['Loss of hip sensation', 'Emaciation']
     asthi_samaa= ['Erect body posture', 'Withstand heavy work']
     asthi_vriddhi=['Increased bones', 'Increased teeth']
@@ -113,17 +113,17 @@ def dhatus (d2):
     dhatus=[]
     for i in  d2:
         if i in rasa_samaa:
-            dhatus.append("Rada-samaa")
+            dhatus.append("Rasa-samaa")
         elif i in rasa_vriddhi:
             dhatus.append("Rasa-vriddhi")
         elif i in rasa_kshaya:
             dhatus.append("Rasa-kshaya")
-        elif i in rakta_samaa:
-            dhatus.append("Rakta-samaa")
-        elif i in rakta_vriddhi:
-            dhatus.append("Rakta-vriddhi")
+        elif i in rakhta_samaa:
+            dhatus.append("rakhta-samaa")
+        elif i in rakhta_vriddhi:
+            dhatus.append("rakhta-vriddhi")
         elif i in raktha_kshaya:
-            dhatus.append("Rakta-kshaya")
+            dhatus.append("rakhta-kshaya")
         elif i in mamsa_samaa:
             dhatus.append("Mamsa-samaa")
         elif i in mamsa_vriddhi:
@@ -183,7 +183,7 @@ def bala(d5):
             bala.append("Avara")
         elif str(a)=="Can perform activities with difficulty":
             bala.append("Madhyama")
-        elif str(a)=="Call perform all activities":
+        elif str(a)=="Can perform all activities":
             bala.append("Pravara")
     bala=list(set(bala))
     return bala

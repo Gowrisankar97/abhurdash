@@ -123,7 +123,7 @@ def dropdown():
  'Tiredness',
  'Dyspnoea on exertion',
  'Drooping buttocks',
- 'breasts and abdomen',
+ 'Dropping breasts and abdomen',
  'Loss of hip sensation',
  'Emaciation',
  'Erect body posture',
