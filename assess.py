@@ -159,7 +159,7 @@ def desha(d3):
         if str(a)=="Wetland":
             desha.append("Anoopa")
         elif str(a)=="Dry land":
-            desha.append("Jaagarana")
+            desha.append("jangama")
         elif str(a)=="Normal":
             desha.append("Saadharana")
     desha=list(set(desha))
@@ -244,7 +244,7 @@ def rogakaala(d9):
 
 
 def assesform(a, b):
- finaloutput1 = ["Division-creteria"]
+ finaloutput1 = ["Division-criteria"]
  for i in range(len(a)):
   tex = str(a[i] + " -> " + str(b[i])[2:-2])
   finaloutput1.append(tex)
