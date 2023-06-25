@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 app = Flask(__name__)
 import assess
-
+import dataps
 
 
 @app.route('/', methods=['GET',"POST"])
@@ -26,6 +26,42 @@ def dropdown():
      saatmya=assess.saatmya(saatmya)
      satva=assess.satva(satva)
      rogakaala=assess.rogakaala(rogakaala)
+     year=request.form.getlist("age")
+     month=request.form.getlist("month")
+     age=dataps.agecv(year[0],month[0])
+     gender=request.form.getlist("Gender")
+     walk=request.form.getlist("walk")
+     speech=request.form.getlist("speech")
+     limb=request.form.getlist("limb")
+     eyec=request.form.getlist("eyec")
+     response=request.form.getlist("response")
+     hyper=request.form.getlist("hyper")
+     activity=request.form.getlist("activity")
+     concen=request.form.getlist("concen")
+     headache=request.form.getlist("headache")
+     conv=request.form.getlist("convolution")
+     conv=dataps.sectomin(conv[0])
+     mouth=request.form.getlist("mouth")
+     itch=request.form.getlist("itch")
+     ooz=request.form.getlist("ooz")
+     lesion=request.form.getlist("lesion")
+     milestone=request.form.getlist("milestone")
+     feed=request.form.getlist("feed")
+     neck=request.form.getlist("neck")
+     sepsis=request.form.getlist("sepsis")
+     respiratory=request.form.getlist("respiratory")
+     eye=request.form.getlist("eye")
+     body=request.form.getlist("body")
+     jlimbs=request.form.getlist("jlimbs")
+     fever=request.form.getlist("fever")
+     delivery=request.form.getlist("delivery")
+
+     dosv=dataps.doshavalues(list(doshas))
+
+     mlinp=[age,int(gender[0]),int(walk[0]),int(speech[0]),int(limb[0]),int(eyec[0]),int(response[0]),int(hyper[0]),int(activity[0]),int(concen[0]),int(headache[0]),conv,int(mouth[0]),int(itch[0]),int(ooz[0]),int(lesion[0]),int(milestone[0]),"D","D","D",int(feed[0]),int(neck[0]),int(sepsis[0]),int(respiratory[0]),int(eye[0]),int(body[0]),int(jlimbs[0]),int(fever[0]),int(delivery[0])]
+     print(mlinp)
+     fmlinp=dataps.dosharp(mlinp,dosv)
+
      division = ["Dosha", "Dhatus", "Bala", "Desha", "Kaala", "Anala", "Saatmya", "Satva", "Rogakaala"]
      creteria = [doshas, dhatus, bala, desha, kaala, anala, saatmya,satva,rogakaala]
      output=assess.assesform(division,creteria)
@@ -33,7 +69,7 @@ def dropdown():
 
      return render_template("result.html",division=output)
     else:
-        dosha=['Enthusiasm',
+        dosha=['No Option','Enthusiasm',
  'Respiration',
  'Normal movements of body',
  'Normal expulsion of urges',
@@ -87,7 +123,7 @@ def dropdown():
  'Excess sleep',
  'Giddiness',
  'Heart palpitation']
-        dhatus=['Optimum nourshment',
+        dhatus=['No Option','Optimum nourishment',
  'Increased salivation',
  'Anorexia',
  'Nausea',
@@ -141,16 +177,16 @@ def dropdown():
  'Bone pain',
  'Giddiness',
  'Black-outs']
-        desha=["Wetland","Normal","Dry land"]
-        kaala=["Less than 1 year old","1-2 years old",">2 years old"]
-        bala=["Cannot perform any activities","Can perform activities with difficulty","Call perform all activities"]
-        anala=["No hunger even after no intake","Moderate appetite","Extremely hungry after heavy food"]
-        satva=["Cries often","Difficult to comfort when hurt","Hurts others on purpose","Scared, Slow learner","Annoyed easily","Unfriendly with everyone","Friendly with strangers",
+        desha=['No Option',"Wetland","Normal","Dry land"]
+        kaala=['No Option',"Less than 1 year old","1-2 years old",">2 years old"]
+        bala=['No Option',"Cannot perform any activities","Can perform activities with difficulty","Call perform all activities"]
+        anala=['No Option',"No hunger even after no intake","Moderate appetite","Extremely hungry after heavy food"]
+        satva=['No Option',"Cries often","Difficult to comfort when hurt","Hurts others on purpose","Scared, Slow learner","Annoyed easily","Unfriendly with everyone","Friendly with strangers",
                "Cries reasonably","Can withstand little pain","Kind - hearted","Learn at normal pace","Disobedient at times","Hyperactive","Sleeps late","Choosy friends",
                "Brave, Withstand any pain","Strong,Fast learner","Obedient,Friendly with all"]
-        saatmya=["Prefers only specific taste","Doesn’t take dairy products","Prefers some tastes only",
+        saatmya=['No Option',"Prefers only specific taste","Doesn’t take dairy products","Prefers some tastes only",
 "Prefers all taste of food and dairy products"]
-        rogakaala=["Symptoms occurred within a week","Symptoms persisting for a month","Symptoms persisting from months to years"]
+        rogakaala=['No Option',"Symptoms occurred within a week","Symptoms persisting for a month","Symptoms persisting from months to years"]
 
         return render_template('input.html', doshas=dosha,dhatuss=dhatus,deshas=desha,kaalas=kaala,balas=bala,analas=anala,satvas=satva,saatmyas=saatmya,rogakaalas=rogakaala)
 if __name__ == "__main__":

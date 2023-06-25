@@ -72,6 +72,8 @@ def dosha(d1):
             dosha.append("Kapha-kshaya")
         elif str(i) in kapha_vriddhi:
             dosha.append("Kapha-vriddhi")
+        elif str(i):
+            dosha.append("Not Selected")
 
     doshas = list(set(dosha))
     return doshas
@@ -149,6 +151,8 @@ def dhatus (d2):
             dhatus.append("Majja-vriddhi")
         elif i in majja_kshaya:
             dhatus.append("Majja-kshaya")
+        elif str(i):
+            dhatus.append("Not Selected")
     dhatus=list(set(dhatus))
     return  dhatus
 
@@ -162,6 +166,8 @@ def desha(d3):
             desha.append("jangama")
         elif str(a)=="Normal":
             desha.append("Saadharana")
+        elif str(a):
+            desha.append("Not Selected")
     desha=list(set(desha))
     return  desha
 
@@ -174,6 +180,8 @@ def kaala(d4):
             kaala.append("Ksheera-annada")
         elif str(a)==">2 years old":
             kaala.append("Annada")
+        elif str(a):
+            kaala.append("Not Selected")
     kaala=list(set(kaala))
     return kaala
 
@@ -186,6 +194,8 @@ def bala(d5):
             bala.append("Madhyama")
         elif str(a)=="Can perform all activities":
             bala.append("Pravara")
+        elif str(a):
+            bala.append("Not Selected")
     bala=list(set(bala))
     return bala
 
@@ -198,6 +208,8 @@ def anala(d6):
             anala.append("Madhyama")
         elif str(a)=="Extremely hungry after heavy food":
             anala.append("Pravara")
+        elif str(a):
+            anala.append("Not Selected")
     anala=list(set(anala))
     return anala
 def satva(d7):
@@ -209,9 +221,11 @@ def satva(d7):
         if i in avara:
             satva.append("Avara")
         elif i in madhyama:
-            madhyama.append("Madhyama")
+            satva.append("Madhyama")
         elif i in pravara:
-            pravara.append("Pravara")
+            satva.append("Pravara")
+        elif str(i):
+            satva.append("Not Selected")
 
     satva=list(set(satva))
     return satva
@@ -226,6 +240,8 @@ def saatmya(d8):
              saatmya.append("Madhyama")
          elif str(a)=="Prefers all taste of food and dairy products":
              saatmya.append("Pravara")
+         elif str(a):
+            saatmya.append("Not Selected")
     saatmya=list(set(saatmya))
     return saatmya
 
@@ -239,6 +255,8 @@ def rogakaala(d9):
              rogakaala.append("Madhyama")
          elif str(a)=="Symptoms persisting from months to years":
              rogakaala.append("Pravara")
+         elif str(a):
+             rogakaala.append("Not Selected")
     rogakaala=list(set(rogakaala))
     return rogakaala
 
