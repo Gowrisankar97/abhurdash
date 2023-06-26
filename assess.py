@@ -151,7 +151,7 @@ def dhatus (d2):
             dhatus.append("Majja-vriddhi")
         elif i in majja_kshaya:
             dhatus.append("Majja-kshaya")
-        elif str(i):
+        else:
             dhatus.append("Not Selected")
     dhatus=list(set(dhatus))
     return  dhatus
@@ -166,7 +166,7 @@ def desha(d3):
             desha.append("jangama")
         elif str(a)=="Normal":
             desha.append("Saadharana")
-        elif str(a):
+        else:
             desha.append("Not Selected")
     desha=list(set(desha))
     return  desha
@@ -180,7 +180,7 @@ def kaala(d4):
             kaala.append("Ksheera-annada")
         elif str(a)==">2 years old":
             kaala.append("Annada")
-        elif str(a):
+        else:
             kaala.append("Not Selected")
     kaala=list(set(kaala))
     return kaala
@@ -194,7 +194,7 @@ def bala(d5):
             bala.append("Madhyama")
         elif str(a)=="Can perform all activities":
             bala.append("Pravara")
-        elif str(a):
+        else :
             bala.append("Not Selected")
     bala=list(set(bala))
     return bala
@@ -208,7 +208,7 @@ def anala(d6):
             anala.append("Madhyama")
         elif str(a)=="Extremely hungry after heavy food":
             anala.append("Pravara")
-        elif str(a):
+        else:
             anala.append("Not Selected")
     anala=list(set(anala))
     return anala
@@ -224,7 +224,7 @@ def satva(d7):
             satva.append("Madhyama")
         elif i in pravara:
             satva.append("Pravara")
-        elif str(i):
+        else:
             satva.append("Not Selected")
 
     satva=list(set(satva))
@@ -240,7 +240,7 @@ def saatmya(d8):
              saatmya.append("Madhyama")
          elif str(a)=="Prefers all taste of food and dairy products":
              saatmya.append("Pravara")
-         elif str(a):
+         else:
             saatmya.append("Not Selected")
     saatmya=list(set(saatmya))
     return saatmya
@@ -255,7 +255,7 @@ def rogakaala(d9):
              rogakaala.append("Madhyama")
          elif str(a)=="Symptoms persisting from months to years":
              rogakaala.append("Pravara")
-         elif str(a):
+         else:
              rogakaala.append("Not Selected")
     rogakaala=list(set(rogakaala))
     return rogakaala

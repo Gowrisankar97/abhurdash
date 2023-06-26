@@ -181,7 +181,7 @@ def dropdown():
  'Black-outs']
         desha=['No Option',"Wetland","Normal","Dry land"]
         kaala=['No Option',"Less than 1 year old","1-2 years old",">2 years old"]
-        bala=['No Option',"Cannot perform any activities","Can perform activities with difficulty","Call perform all activities"]
+        bala=['No Option',"Cannot perform any activities","Can perform activities with difficulty","Can perform all activities"]
         anala=['No Option',"No hunger even after no intake","Moderate appetite","Extremely hungry after heavy food"]
         satva=['No Option',"Cries often","Difficult to comfort when hurt","Hurts others on purpose","Scared, Slow learner","Annoyed easily","Unfriendly with everyone","Friendly with strangers",
                "Cries reasonably","Can withstand little pain","Kind - hearted","Learn at normal pace","Disobedient at times","Hyperactive","Sleeps late","Choosy friends",

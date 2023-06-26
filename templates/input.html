@@ -35,14 +35,14 @@
   {% for desha in deshas[1:] %}
     <option value="{{desha}}">{{desha}}</option>
   {% endfor %}
-  <input type="submit" value="Submit" class="myButton center-block"></select>
+  </select>
   <br><br><h3 align="center">Please select Kaala Symptoms</h3>
 <select  name="kaala" method="POST" action="/"  multiple style="padding: 10px" class="center-block">
   <option value="{{kaalas[0]}}" selected >{{kaalas[0]}}</option>
   {% for kaala in kaalas[1:] %}
     <option value="{{kaala}}">{{kaala}}</option>
   {% endfor %}
-  <input type="submit" value="Submit" class="myButton center-block"></select>
+  </select>
   <br><br><h3 align="center">Please select bala Symptoms</h3>
 <select  name="bala" method="POST" action="/"  multiple style="padding: 10px" class="center-block">
   <option value="{{balas[0]}}" selected >{{balas[0]}}</option>
