@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 import assess
 import dataps
-
+import mlpred
 
 @app.route('/', methods=['GET',"POST"])
 def dropdown():
@@ -65,9 +65,11 @@ def dropdown():
      division = ["Dosha", "Dhatus", "Bala", "Desha", "Kaala", "Anala", "Saatmya", "Satva", "Rogakaala"]
      creteria = [doshas, dhatus, bala, desha, kaala, anala, saatmya,satva,rogakaala]
      output=assess.assesform(division,creteria)
+     diag,comm=mlpred.mlresult([fmlinp])
 
 
-     return render_template("result.html",division=output)
+
+     return render_template("result.html",division=output,result=diag,com=comm)
     else:
         dosha=['No Option','Enthusiasm',
  'Respiration',
