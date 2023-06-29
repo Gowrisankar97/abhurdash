@@ -1,7 +1,8 @@
 import joblib
 import os
-os.chdir("C://Users//gowrisankar//PycharmProjects//abhurdash//pkl")
 
+path=os.getcwd()+"//pkl"
+os.chdir(path)
 def mlpredict(v):
     result=[]
     forest=joblib.load('modelrf.pkl')
