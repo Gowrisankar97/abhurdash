@@ -90,7 +90,7 @@ def dropdown():
  'Weakness of body parts',
  'Decreased speech',
  'Decreased physical activity',
- 'Uconsciousness',
+ 'Unconsciousness',
  'Optimal digestion',
  'Optimal hunger',
  'Optimal Thirst',

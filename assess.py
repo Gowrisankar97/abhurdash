@@ -20,7 +20,7 @@ def dosha(d1):
     vata_kshaya=['Weakness of body parts',
   'Decreased speech',
   'Decreased physical activity',
-  'Uconsciousness']
+  'Unconsciousness']
     pitta_samaa=['Optimal digestion',
   'Optimal hunger',
   'Optimal Thirst',
