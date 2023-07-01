@@ -17,9 +17,6 @@ def dropdown():
      saatmya = request.form.getlist("saatmya")
      satva = request.form.getlist("satva")
      rogakaala = request.form.getlist("rogakaala")
-     symptoms=[dosha,dhatus,bala,desha,kaala,anala,saatmya,satva,rogakaala]
-
-
      doshas=assess.dosha(dosha)
      dhatus=assess.dhatus(dhatus)
      bala=assess.bala(bala)
@@ -65,18 +62,14 @@ def dropdown():
      print(mlinp)
      fmlinp=dataps.dosharp(mlinp,dosv)
 
-     division = ["Sthaanika-Dosha", "Dhatus", "Bala", "Desha", "Kaala", "Anala", "Saatmya", "Satva", "Rogakaala"]
+     division = ["Dosha", "Dhatus", "Bala", "Desha", "Kaala", "Anala", "Saatmya", "Satva", "Rogakaala"]
      creteria = [doshas, dhatus, bala, desha, kaala, anala, saatmya,satva,rogakaala]
      output=assess.assesform(division,creteria)
-     output1=assess.symform(division,symptoms)
      diag,comm=mlpred.mlresult([fmlinp])
-     nulltest = fmlinp
-     nulltest.pop(0)
-     nulltest.pop(0)
-     if len(set(nulltest))>1:
-      return render_template("result.html",division=output,symp=output1,result=diag,com=comm)
-     else:
-      return render_template("alert.html")
+
+
+
+     return render_template("result.html",division=output,result=diag,com=comm)
     else:
         dosha=['No Option','Enthusiasm',
  'Respiration',
