@@ -26,6 +26,15 @@ table, th {
 
 {% endfor %}
 
+</table><br><h2 align="center">Patient Symptoms</h2><br>
+<table align="center">
+  {% for day in symp %}
+ <tr> <th>
+    {{day}}
+  </th></tr>
+
+{% endfor %}
+
 </table>
 <br><br><h3 align="center">Ml Predicted Diagnosis:<mark>{{result}}</mark></h3>
 <h3 style="color:green;" align="center">{{com}}</h3><br>
