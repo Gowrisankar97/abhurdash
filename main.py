@@ -70,10 +70,13 @@ def dropdown():
      output=assess.assesform(division,creteria)
      output1=assess.symform(division,symptoms)
      diag,comm=mlpred.mlresult([fmlinp])
-
-
-
-     return render_template("result.html",division=output,symp=output1,result=diag,com=comm)
+     nulltest = fmlinp
+     nulltest.pop(0)
+     nulltest.pop(0)
+     if len(set(nulltest))>1:
+      return render_template("result.html",division=output,symp=output1,result=diag,com=comm)
+     else:
+      return render_template("alert.html")
     else:
         dosha=['No Option','Enthusiasm',
  'Respiration',
