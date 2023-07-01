@@ -47,7 +47,7 @@ def rprocess(r,sc):
     elif int(r[0])==2:
         diag="Unmada"
     elif int(r[0])==3:
-        diag="Sarvanga vata"
+        diag="Sarvanga-Roga"
     elif int(r[0])==4:
         diag="Apasmara"
     elif int(r[0])==5:

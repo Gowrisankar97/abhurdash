@@ -16,9 +16,7 @@ def doshavalues(vv):
 def agecv(a,m):
    age = float(str(a) + "." + str(m))
 
-   if int(a)==0:
-       a=age
-   elif int(m)<=6:
+   if int(m)<=6:
        a =float(math.floor(age))
    else:
        a =float(math.ceil(age))

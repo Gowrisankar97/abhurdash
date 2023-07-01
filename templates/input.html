@@ -17,59 +17,59 @@
 </head>
 
 <body ><form method="POST" action="/"  >
-    <h3 align="center">Please select Dosha Symptoms</h3>
+    <h3 align="center">Please select Sthaanika-Dosha Symptoms</h3>
 <select  name="dosha" method="POST" action="/"  multiple style="padding: 10px" class="center-block">
   <option value="{{doshas[0]}}" selected >{{doshas[0]}}</option>
   {% for dosha in doshas[1:] %}
     <option value="{{dosha}}">{{dosha}}</option>
   {% endfor %}
-</select><br><br><h3 align="center">Please select Dhatus Symptoms</h3>
+</select><h3 align="center">Please select Dhatus Symptoms</h3>
 <select  name="dhatus" method="POST" action="/"  multiple style="padding: 10px" class="center-block">
   <option value="{{dhatuss[0]}}" selected >{{dhatuss[0]}}</option>
   {% for dhatus in dhatuss[1:] %}
     <option value="{{dhatus}}">{{dhatus}}</option>
   {% endfor %}
-</select><br><br><h3 align="center">Please select Desha Symptoms</h3>
+</select><h3 align="center">Please select Desha Symptoms</h3>
 <select  name="desha" method="POST" action="/"  multiple style="padding: 10px" class="center-block">
   <option value="{{deshas[0]}}" selected >{{deshas[0]}}</option>
   {% for desha in deshas[1:] %}
     <option value="{{desha}}">{{desha}}</option>
   {% endfor %}
   </select>
-  <br><br><h3 align="center">Please select Kaala Symptoms</h3>
+  <h3 align="center">Please select Kaala Symptoms</h3>
 <select  name="kaala" method="POST" action="/"  multiple style="padding: 10px" class="center-block">
   <option value="{{kaalas[0]}}" selected >{{kaalas[0]}}</option>
   {% for kaala in kaalas[1:] %}
     <option value="{{kaala}}">{{kaala}}</option>
   {% endfor %}
   </select>
-  <br><br><h3 align="center">Please select bala Symptoms</h3>
+  <h3 align="center">Please select bala Symptoms</h3>
 <select  name="bala" method="POST" action="/"  multiple style="padding: 10px" class="center-block">
   <option value="{{balas[0]}}" selected >{{balas[0]}}</option>
   {% for bala in balas[1:] %}
     <option value="{{bala}}">{{bala}}</option>
-  {% endfor %}</select><br><br>
+  {% endfor %}</select>
   <h3 align="center">Please select anala Symptoms</h3>
 <select  name="anala" method="POST" action="/"  multiple style="padding: 10px" class="center-block">
   <option value="{{analas[0]}}" selected >{{analas[0]}}</option>
   {% for anala in analas[1:] %}
     <option value="{{anala}}">{{anala}}</option>
   {% endfor %}</select>
-  <br><br>
+
   <h3 align="center">Please select satva Symptoms</h3>
 <select  name="satva" method="POST" action="/"  multiple style="padding: 10px" class="center-block">
   <option value="{{satvas[0]}}" selected >{{satvas[0]}}</option>
   {% for satva in satvas[1:] %}
     <option value="{{satva}}">{{satva}}</option>
   {% endfor %}</select>
-  <br><br>
+
   <h3 align="center">Please select saatmya Symptoms</h3>
 <select  name="saatmya" method="POST" action="/"  multiple style="padding: 10px" class="center-block">
   <option value="{{saatmyas[0]}}" selected >{{saatmyas[0]}}</option>
   {% for saatmya in saatmyas[1:] %}
     <option value="{{saatmya}}">{{saatmya}}</option>
   {% endfor %}</select>
-  <br><br>
+
   <h3 align="center">Please select rogakaala Symptoms</h3>
 <select  name="rogakaala" method="POST" action="/"  multiple style="padding: 10px" class="center-block">
   <option value="{{rogakaalas[0]}}" selected >{{rogakaalas[0]}}</option>
@@ -79,7 +79,7 @@
   <h1 align="center">Disease assessment</h1>
   <h3 align="center">Please fill the assessment form</h3><br>
 <div style="text-align:center"><label  for="age">Age:</label>
-  <input type="number" id="age" name="age" min="0" max="17" required>
+  <input type="number" id="age" name="age" min="1" max="17" required>
   <label  for="month">Month:</label>
   <input type="number" id="month" name="month" min="0" max="11" required>
   <br><br>
@@ -139,7 +139,7 @@
 <select name="ooz" id="ooz">
   <option value=0>No</option>
   <option value=1>Yes</option></select>
-  <br><br>
+
     <label for="lesion">Skin Lesion:</label>
 <select name="lesion" id="lesion">
   <option value=0>No</option>

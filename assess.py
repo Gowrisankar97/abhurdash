@@ -262,7 +262,14 @@ def rogakaala(d9):
 
 
 def assesform(a, b):
- finaloutput1 = ["Division-criteria"]
+ finaloutput1 = ["Division-Criteria"]
+ for i in range(len(a)):
+  tex = str(a[i] + " -> " + str(b[i])[2:-2])
+  finaloutput1.append(tex)
+ return finaloutput1
+
+def symform(a, b):
+ finaloutput1 = ["Division-Symptoms"]
  for i in range(len(a)):
   tex = str(a[i] + " -> " + str(b[i])[2:-2])
   finaloutput1.append(tex)
